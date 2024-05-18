@@ -23,7 +23,7 @@ const navi = useNavigate()
   const handleSubmit = async (event) => {
     event.preventDefault();
     // console.log(formData)
-    await axios.post("http://localhost:4001/api/register",formData)
+    await axios.post("https://e-commerce-backend-ten-gules.vercel.app/register",formData)
     .then((res)=> {
       
     alert(res.data.message)
