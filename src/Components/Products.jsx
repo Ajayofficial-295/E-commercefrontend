@@ -17,17 +17,18 @@ const Products = () => {
     const [loading, setLoading] = useState(false)
    
 
-    const getProducts = async () => {
-        setLoading(true)
-        const response = await fetch("https://fakestoreapi.com/products")
-        setData(await response.json());
-        setFilter(data)
-        setLoading(false)
-    }
-
     useEffect(() => {
+        const getProducts = async () => {
+            setLoading(true);
+            const response = await fetch("https://fakestoreapi.com/products");
+            const products = await response.json();
+            setData(products);
+            setFilter(products);
+            setLoading(false);
+        }
+
         getProducts();
-    }, [getProducts]);
+    }, []);
 
 
     const Loading = () => {
