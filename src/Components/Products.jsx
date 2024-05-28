@@ -17,7 +17,7 @@ const Products = () => {
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         getProducts()
-    }, [])
+    }, [getProducts])
 
     const getProducts = async () => {
         setLoading(true)
