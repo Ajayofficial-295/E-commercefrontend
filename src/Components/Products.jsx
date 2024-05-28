@@ -26,8 +26,8 @@ const Products = () => {
     }
 
     useEffect(() => {
-        getProducts()
-    }, [data])
+        getProducts();
+    }, [getProducts]);
 
 
     const Loading = () => {
