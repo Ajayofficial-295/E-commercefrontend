@@ -136,7 +136,7 @@ const Products = () => {
 
           <div className="footer-rigth">
           <p>Get In Touch</p>
-          <div className="ajay"> 
+          <div className="does"> 
           <input type="text" id='email' className='subscribe-input' placeholder='Your Email' />
           <button  className='subcribe-btn'>Subscribe</button>
           </div>
@@ -144,7 +144,7 @@ const Products = () => {
           
           <div className='pement-way'>
             <div className='money-one'>       
-                      <img src="./Images/paypal.jpg"  alt="notfound"></img>
+                      <img src="./Images/paypal.jpg" alt=''></img>
             </div>
             
 
@@ -154,23 +154,12 @@ const Products = () => {
           </div>
 <div className="copy-rigth">
   <p>Copyrights© 2023 Best Buy</p>
-</div>
-
-<div className="written">
-  <h6>Legal Stuf</h6>
-  <h6>Privacy POlicy</h6>
-  <h6>Security</h6>
-  <h6>Website Accebility</h6>
-  <h6>Manage Cookies</h6>
 
 </div>
-
-
-
 
             </section>
         </div>
     )
 }
 
-export default Products
+export default Products;
