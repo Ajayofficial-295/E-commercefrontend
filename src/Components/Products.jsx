@@ -27,7 +27,7 @@ const Products = () => {
 
     useEffect(() => {
         getProducts()
-    }, [getProducts()])
+    }, [data])
 
 
     const Loading = () => {
