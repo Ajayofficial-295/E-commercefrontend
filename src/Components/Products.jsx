@@ -15,9 +15,7 @@ const Products = () => {
     const [data, setData] = useState([])
     const [filter, setFilter] = useState(data)
     const [loading, setLoading] = useState(false)
-    useEffect(() => {
-        getProducts()
-    }, [getProducts])
+   
 
     const getProducts = async () => {
         setLoading(true)
@@ -26,6 +24,12 @@ const Products = () => {
         setFilter(data)
         setLoading(false)
     }
+
+    useEffect(() => {
+        getProducts()
+    }, [getProducts()])
+
+
     const Loading = () => {
         return (
             <>
@@ -94,10 +98,10 @@ const Products = () => {
 
             <div className="Footer-top-links">
   <div className="footer-social-wrapper">
-    <a href="#"><FaFacebookF /></a>
-    <a href="#"><FaTwitter /></a>
-    <a href="#"><FaLinkedin /></a>
-    <a href="#"><FaInstagram /></a>
+    <a href="www.facebook.com"><FaFacebookF /></a>
+    <a href="www.twitter.com"><FaTwitter /></a>
+    <a href="www.linkedin.com"><FaLinkedin /></a>
+    <a href="www.instagram.com"><FaInstagram /></a>
   </div>
 </div>
          <div className="Footer-left">
