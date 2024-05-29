@@ -20,7 +20,7 @@ const Product = () => {
 
     useEffect(() => {
         getProduct();
-    }, []);
+    }, [getProduct]);
 
     const getProduct = async () => {
         setLoading(true);
