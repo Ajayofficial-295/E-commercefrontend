@@ -18,21 +18,23 @@ const Product = () => {
         alert("Item added successfully");
     };
 
-    useEffect(() => {
-        getProduct();
-    }, [getProduct]);
 
-    const getProduct = async () => {
+
+    useEffect(() => {
         setLoading(true);
-        try {
-            const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
-            setProduct(response.data);
-        } catch (error) {
-            console.error("There was an error fetching the product!", error);
-        } finally {
-            setLoading(false);
-        }
-    };
+        // const response =  fetch("https://fakestoreapi.com/products");
+        // const products =  response.json();
+        axios.get(`https://fakestoreapi.com/products/${id}`).then( (res)=> {
+          setProduct(res.data)  
+
+        }) 
+        // setData(products);
+        // setFilter(products);
+        setLoading(false);
+    
+
+}, []);
+
 
     const Loading = () => {
         return (
