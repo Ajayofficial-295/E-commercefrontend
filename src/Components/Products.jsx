@@ -7,7 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
+import axios from "axios"
 
 
 
@@ -18,16 +18,19 @@ const Products = () => {
    
 
     useEffect(() => {
-        const getProducts = async () => {
             setLoading(true);
-            const response = await fetch("https://fakestoreapi.com/products");
-            const products = await response.json();
-            setData(products);
-            setFilter(products);
-            setLoading(false);
-        }
+            // const response =  fetch("https://fakestoreapi.com/products");
+            // const products =  response.json();
+            axios.get("https://fakestoreapi.com/products").then( (res)=> {
+              setData(res.data)  
+              setFilter(res.data)
 
-        getProducts();
+            }) 
+            // setData(products);
+            // setFilter(products);
+            setLoading(false);
+        
+
     }, []);
 
 
