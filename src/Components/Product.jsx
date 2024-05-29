@@ -33,7 +33,7 @@ const Product = () => {
         setLoading(false);
     
 
-}, []);
+}, );
 
 
     const Loading = () => {
